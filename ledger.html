@@ -1,0 +1,9 @@
+<h1>Your Transactions</h1>
+
+<a href="/">
+<img src="/img/marbles.png" alt="marbles">
+</a>
+
+{{ range $key, $value := .log }}
+    <li><strong>{{ $value.marbles }}</strong> {{ $value.humanTime }}</li>
+{{ end }}

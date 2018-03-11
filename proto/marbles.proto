@@ -1,0 +1,25 @@
+syntax = "proto2";
+package marbles_proto;
+
+message Transaction {
+  required int32 marbles = 1;
+  required Type type = 2;
+  required int64 time = 3;
+  optional Person account = 4;
+  optional string description = 5;
+  optional bool merit = 6;
+
+  enum Type {
+    CREDIT = 0;
+    DEBIT = 1;
+  }
+
+  enum Person {
+    JOSIE = 0;
+    AUDRA = 1;
+  }
+}
+
+message TransactionLog {
+  repeated Transaction transactions = 1;
+}

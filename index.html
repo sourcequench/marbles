@@ -1,0 +1,18 @@
+<h1>You've got {{.Balance}} minutes ({{.Movies}} movies)</h1>
+
+<a href="/">
+<img src="/img/marbles.png" alt="marbles">
+</a>
+
+<form action="/save/" method="POST">
+  
+  <input type="hidden" name="person" value="0">
+  How many minutes?<br>
+  <input type="text" name="marblecount"><br>
+  What did you watch (optional)?<br>
+  <input type="text" name="description"><br>
+
+<div><input type="submit" value="Spend"></div>
+</form>
+
+<a href="/ledger">See all transactions</a>
